@@ -18,14 +18,13 @@ Add value(s) to random reservoir(s) using Vitter's R.
 **Args:**  
  *1*: seed for random number generator
  *2*: fixed size for the reservoir, e.g. 1024  
- *3+*: numeric value(s) to be added to all reservoirs.  
+ *3+*: numeric value(s) to be added to the reservoir.  
 
 **Time Complexity:**  
 
-*O(N * M * L):*  
-  *N* is the number of reservoirs
-  *M* is the number of values
-  *L* is the average reservoir size.
+*O(N * M)*:  
+  *N* is the number of values  
+  *M* is the reservoir size.
 
 #### Examples
 

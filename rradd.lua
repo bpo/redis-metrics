@@ -1,4 +1,4 @@
--- rrupdate 
+-- rradd 
 math.randomseed(ARGV[1])
 
 local res = KEYS[1]
