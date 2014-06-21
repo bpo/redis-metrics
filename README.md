@@ -38,6 +38,22 @@ Add value(s) to random reservoir(s) using Vitter's R.
   random sample. The effects of this change will decrease as the script is
   repeatedly called.
 
+## rquantile.lua
+
+Calculate a quantile over a reservoir.
+
+**Keys:**  
+ *1*: list holding values to be sampled, e.g. `temperature:reservoir`
+
+**Args:**  
+ *1*: Quantile to calculate, expressed as a float between 0 and 1, with .5 as
+      the median.
+
+**Time Complexity:**
+
+*O(N)*:  
+  *N* is the size of the reservoir.
+
 
 Notes
 =====
