@@ -20,9 +20,7 @@ Add value(s) to random reservoir(s) using Vitter's R.
  *2*: fixed size for the reservoir, e.g. 1024  
  *3+*: numeric value(s) to be added to the reservoir.  
 
-**Time Complexity:**  
-
-*O(N * M)*:  
+**Time Complexity: O(N \* M)**   
   *N* is the number of values  
   *M* is the reservoir size.
 
@@ -49,9 +47,7 @@ Calculate a quantile over a reservoir.
  *1*: Quantile to calculate, expressed as a float between 0 and 1, with .5 as
       the median.
 
-**Time Complexity:**
-
-*O(N)*:  
+**Time Complexity: O(N)**:  
   *N* is the size of the reservoir.
 
 
