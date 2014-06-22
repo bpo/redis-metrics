@@ -26,7 +26,7 @@ Add value(s) to random reservoir(s) using Vitter's R (3).
 
 #### Examples
 
-./run.sh rradd.lua 2 temperature:reservoir temperature:counter `date +"%N%s"` 5 76.3
+    ./run.sh rradd.lua 2 temperature:reservoir temperature:counter `date +"%N%s"` 5 76.3
 
 #### Caveats
 
