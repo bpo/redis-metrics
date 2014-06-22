@@ -9,7 +9,7 @@ What's here?
 
 ## rradd.lua
 
-Add value(s) to random reservoir(s) using Vitter's R.
+Add value(s) to random reservoir(s) using Vitter's R (3).
 
 **Keys:**  
  *1*: list holding a random reservoir, e.g. `temperature:reservoir`  
@@ -58,3 +58,13 @@ Notes
   making (perhaps naive) assumptions about the implementations of libraries
   called. They have not been tested and are here to document the expectations
   of the (also perhaps naive) author.
+
+
+Citations
+=========
+
+3. Vitter, Jeffrey S. ["Random sampling with a reservoir."][vitter] ACM Transactions on
+   Mathematical Software (TOMS) 11.1 (1985): 37-57.
+
+[vitter]: http://www.mathcs.emory.edu/~cheung/papers/StreamDB/RandomSampling/1985-Vitter-Random-sampling-with-reservior.pdf
+
