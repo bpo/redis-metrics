@@ -38,7 +38,7 @@ Add value(s) to random reservoir(s) using Vitter's R (3).
 
 ## rquantile.lua
 
-Calculate a quantile over a reservoir.
+Calculate a quantile over an unsorted reservoir.
 
 **Keys:**  
  *1*: list holding values to be sampled, e.g. `temperature:reservoir`
@@ -50,6 +50,11 @@ Calculate a quantile over a reservoir.
 **Time Complexity: O(N \* log N)**:  
   *N* is the size of the reservoir.
 
+#### Examples
+
+* Calcluating the median temperature:
+
+    ./run.sh rquantile.lua 1 temperature:reservoir 0.5
 
 Notes
 =====
