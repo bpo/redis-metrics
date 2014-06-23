@@ -47,7 +47,7 @@ Calculate a quantile over a reservoir.
  *1*: Quantile to calculate, expressed as a float between 0 and 1, with .5 as
       the median.
 
-**Time Complexity: O(N)**:  
+**Time Complexity: O(N \* log N)**:  
   *N* is the size of the reservoir.
 
 
