@@ -33,7 +33,8 @@ Add '76.3' to a random reservoir of temperatures.
 #### Caveats
 
 * The seed for the random number generator should change on each invocation of
-  the script.
+  the script. In the example above I've seeded with the nanosecond date from GNU
+  `date`. In a real environment you might do this with bytes from /dev/urandom.
 * Changing the fixed size of the reservoir will affect the accuracy of the
   random sample. The effects of this change will decrease as the script is
   repeatedly called.
