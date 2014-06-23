@@ -54,7 +54,7 @@ Calculate a quantile over an unsorted reservoir.
 
 #### Examples
 
-* Calcluating the median temperature:
+Calcluating the median temperature:
 
     ./run.sh rquantile.lua 1 temperature:reservoir 0.5
 
