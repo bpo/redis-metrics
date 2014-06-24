@@ -7,6 +7,20 @@ Lua scripts for analytics with Redis.
 What's here?
 ============
 
+## fradd.lua
+
+Add value(s) to a simple sliding-window reservoir.
+
+**Keys:**
+ *1*: list holding a simple sliding reservoir, e.g. `temperature:reservoir`
+
+**Args:**
+ *1*: fixed size for the reservoir, e.g. 1024
+ *2+*: numeric value(s) to be added to the reservoir.
+
+**Time Complexity: O(N)**
+  *N* is the number of values added with this operation
+
 ## rradd.lua
 
 Add value(s) to a random reservoir using Vitter's R (3).
