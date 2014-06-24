@@ -7,6 +7,19 @@ Lua scripts for analytics with Redis.
 What's here?
 ============
 
+## naiveadd.lua
+
+Add value(s) to an unbounded reservoir.
+
+**Keys:**  
+ *1*: list holding an unbounded reservoir.
+
+**Args:**  
+ *1+*: numeric value(s) to be added to the reservoir.
+
+**Time Complexity: O(N)**  
+ *N* is the number of values added with this operation.
+
 ## fradd.lua
 
 Add value(s) to a simple sliding-window reservoir.
