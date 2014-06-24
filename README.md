@@ -9,7 +9,7 @@ What's here?
 
 ## rradd.lua
 
-Add value(s) to random reservoir(s) using Vitter's R (3).
+Add value(s) to a random reservoir using Vitter's R (3).
 
 **Keys:**  
  *1*: list holding a random reservoir, e.g. `temperature:reservoir`  
