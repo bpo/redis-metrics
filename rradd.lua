@@ -1,23 +1,34 @@
 -- rradd 
+
+-- our reservoir key
+local res = KEYS[1]
+-- key with a counter incremented for each value seen
+local counter = KEYS[2]
+
+-- seed the random number generator on every invocation
 math.randomseed(ARGV[1])
 
-local res = KEYS[1]
-local counter = KEYS[2]
-local targetsize = tonumber(ARGV[2])
+-- the maximum size of our reservoir
+local maxsize = tonumber(ARGV[2])
+-- the current size of our reservoir
+local ressize = redis.call('LLEN', res)
+-- the total number of values that have been seen.
+local totalsize = redis.call('GET', counter)
 
-local ressize = redis.call('llen', res)
-local totalsize = redis.call('get', counter)
-
+-- iterate over the remaining arguments, which contain values to be added.
 for i=3,#ARGV do
 
-  if ressize < targetsize then
-    ressize = redis.call('rpush', res, ARGV[i])
+  -- until the reservoir is full, just add values.
+  if ressize < maxsize then
+    ressize = redis.call('RPUSH', res, ARGV[i])
   else
+    -- as the total number of values seen increases, the likelihood of one being
+    -- chosen for our reservoir decreases.
     local r = math.random(totalsize)
     if r < ressize then
-      redis.call('lset', res, r, ARGV[i])
+      redis.call('LSET', res, r, ARGV[i])
     end
   end
 
-  totalsize = redis.call('incr', counter)
+  totalsize = redis.call('INCR', counter)
 end
