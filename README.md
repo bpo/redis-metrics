@@ -24,11 +24,11 @@ Add value(s) to an unbounded reservoir.
 
 Add value(s) to a simple sliding-window reservoir.
 
-**Keys:**
+**Keys:**  
  *1*: list holding a simple sliding reservoir, e.g. `temperature:reservoir`
 
-**Args:**
- *1*: fixed size for the reservoir, e.g. 1024
+**Args:**  
+ *1*: fixed size for the reservoir, e.g. 1024  
  *2+*: numeric value(s) to be added to the reservoir.
 
 **Time Complexity: O(N)**
