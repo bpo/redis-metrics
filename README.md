@@ -3,6 +3,27 @@ redis-metrics
 
 Lua scripts for analytics with Redis.
 
+Loading and Running
+===================
+
+To load any of these scripts and test it against a local Redis server, use
+`run.sh`:
+
+**usage**: `./run.sh script numkeys [key ...] [arg ...]`
+
+*script* is the path of a file containing a lua script  
+*numkeys* is the number of keys modified by that script
+
+Each key is accessible in the lua script using the KEYS global variable.  
+Each arg is accessible in the lua script using the ARGV global variable.
+
+**example:** $ ./run.sh hello.lua 0
+
+To build something integrating these scripts into a real environment, see the
+docs on [`EVAL`](http://redis.io/commands/eval) and
+[`EVALSHA`](http://redis.io/commands/evalsha), and check out the way your client
+library supports loading and managing Lua scripts.
+
 
 What's here?
 ============
